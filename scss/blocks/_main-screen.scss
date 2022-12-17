@@ -1,0 +1,120 @@
+.main-screen {
+
+    &__body {
+        @include desktop-small {
+            flex-direction: column-reverse;
+        }
+        margin-top: 51px;
+        display: flex;
+        align-items: center;
+        
+        gap: 90px;
+    }
+
+    &__info {
+        flex-shrink: 0;
+    }
+
+    &__title {
+        @include text($font, 700, 92px, 109px, $color-white);
+        margin-bottom: 24px;
+    }
+
+    &__subtitle {
+        @include text($font, 500, 18px, 21px, $color-white);
+        text-transform: uppercase;
+        margin-bottom: 24px;
+        display: flex;
+        gap: 24px;
+    }
+
+    &__desc {
+        @include text($font, 400, 16px, 160%, $color-body);
+        margin-bottom: 24px;
+        max-width: 557px;
+    }
+
+    &__btn {
+        display: inline-block;
+        padding: 13px 18px;
+        @include text($font, 500, 16px, 19px, $color-white);
+        background: $color-primary;
+        border: 0;
+        outline: 0;
+        border-radius: 5px;
+        cursor: pointer;
+        &:hover {
+            background: $color-body;
+            
+        }
+
+    }
+
+    &__avatar {
+    }
+
+    &__img {
+        position: relative;
+        border-radius: 50%;
+        &::before,
+        &::after {
+            position: absolute;
+            z-index: 0;
+            content: '';
+            display: block;
+            border-radius: 50%;
+            background: $color-grad;
+        }
+        &::before {
+            top: -50px;
+            right: -31px;
+            width: 342px;
+            height: 342px;
+           
+        }
+        &::after {
+            bottom: -10px;
+            left: 45px;
+            width: 209px;
+            height: 209px;
+           
+        }
+        img {
+            position: relative;
+            border-radius: 50%;
+            z-index: 1;
+        }
+    }
+}
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 37px 0px;
+
+    &__logo {
+        @include text($font, 700, 28px, 33px, $color-white);
+        span {
+            color: $color-primary;
+        }
+    }
+}
+.header-nav {
+
+    &__ul {
+        display: flex;
+        align-items: center;
+        gap: 24px;
+    }
+
+    &__li {
+    }
+
+    &__a {
+        @include text($font, 400, 16px, 19px, $color-white);
+        &._active, &:hover {
+            color: $color-primary;
+        }
+        transition: $transition;
+    }
+}

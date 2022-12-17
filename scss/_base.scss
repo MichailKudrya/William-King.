@@ -1,3 +1,26 @@
 body {
     font-family: $font;
+    background: $color-dark_1;
+    color: $color-white;
 }
+a {
+    color: $color-white;
+}
+h1 {
+    margin: 0;
+}
+img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+
+.container {
+    max-width: 1180px;
+    padding: 0 20px;
+    width: 100%;
+    margin: 0 auto;
+    
+}
+
