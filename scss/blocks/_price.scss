@@ -1,0 +1,82 @@
+.price {
+    margin-top: 90px;
+    margin-bottom: 90px;
+    @include mobile {
+        margin-top: 45px;
+        margin-bottom: 45px;
+    }
+
+    &_cost {
+        @include text ($font, 500, 44px, 52px, $color-white);
+        text-transform: uppercase;
+        margin: 0;
+        margin-bottom: 14px;
+    }
+
+    &__lists {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 26px;
+        @include tablet-small {
+            grid-template-columns: 1fr 1fr;
+        }
+        @include mobile {
+            grid-template-columns: 1fr;
+        }
+    }
+
+    .item {
+        border-radius: 8px;
+        background: $color-dark_2;
+        padding: 32px;
+
+    }
+
+    &__info {
+    }
+
+    &__title {
+        @include text ($font, 500, 16px, 19px, $color-white);
+        text-transform: uppercase;
+        margin: 0;
+        margin-bottom: 14px;
+    }
+
+    &__desc {
+        @include text ($font, 400, 14px, 160%, $color-body);
+        margin-bottom: 35px;
+    }
+
+    &__btn {
+        margin-top: 35px;
+        @include text ($font, 500, 16px, 19px, $color-white);
+        padding: 13px 18px;
+        background: $color-dark_2;
+        border: 1px solid $color-primary;
+        border-radius: 5px;
+        transition: $transition;
+        margin-bottom: 40px;
+        &:hover {
+            background: $color-primary;
+        }
+    }
+
+    &__ul {
+
+    }
+
+    &__li {
+        display: flex;
+        gap: 12px;
+        margin-bottom: 21px;
+        p {
+            margin: 0;
+            @include text ($font, 400, 16px, 19px, $color-grey);
+        }
+    }
+
+    &__icon {
+        width: 20px;
+        height: 18px;
+    }
+}

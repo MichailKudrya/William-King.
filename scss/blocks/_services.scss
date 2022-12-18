@@ -1,0 +1,50 @@
+.services {
+    margin-top: 90px;
+    margin-bottom: 90px;
+    @include mobile {
+        margin-top: 45px;
+        margin-bottom: 45px;
+    }
+
+    &__list {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 26px;
+        @include tablet-small {
+            grid-template-columns: 1fr;
+        }
+    }
+
+    .item {
+        display: flex;
+        gap: 20px;
+        padding: 32px;
+        background: $color-dark_2;
+        border-radius: 12px;
+
+        &__icon {
+            min-width: 76px;
+            min-height: 76px;
+        }
+    
+        &__info {
+            h3 {
+                margin: 0;
+            }
+        }
+    
+        &__title {
+            @include text ($font, 500, 22px, 26px, $color-white);
+            margin-bottom: 12px;
+        }
+    
+        &__desc {
+            @include text ($font, 400, 16px, 160%, $color-body);
+            margin: 0;
+            &:hover {
+                color: $color-white;
+            }
+        }
+    }
+}
+

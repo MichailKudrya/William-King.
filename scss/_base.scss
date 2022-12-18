@@ -22,7 +22,9 @@ img {
     height: auto;
     object-fit: cover;
 }
-
+ hr {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+ }
 
 .container {
     max-width: 1180px;
@@ -30,5 +32,27 @@ img {
     width: 100%;
     margin: 0 auto;
     
+}
+
+.info {
+    max-width: 460px;
+    width: 100%;
+    @include tablet-small {
+        text-align: center;
+        margin: 0 auto;
+    }
+
+    &__title {
+        @include text ($font, 700, 44px, 52px, $color-white);
+        margin-bottom: 17px;
+        span {
+            color: $color-primary;
+        }
+    }
+
+    &__desc {
+        @include text ($font, 400, 16px, 160%, $color-body);
+        margin-bottom: 40px;
+    }
 }
 
