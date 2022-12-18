@@ -1,0 +1,37 @@
+.footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    @include desktop-small {
+        flex-direction: column;
+        padding: 25px 10px;
+    }
+    padding: 40px 10px;
+    background: $color-dark_2;
+
+    &__copyright {
+        @include text ($font, 400, 16px, 19px, $color-white);
+        text-align: center;
+        span {
+            color: $color-primary;
+        }
+    }
+
+    &__ul {
+        display: flex;
+        gap: 34px;
+        @include desktop-small {
+            gap: 15px;
+            
+        }
+        
+    }
+
+
+    &__a {
+        @include text ($font, 400, 16px, 19px, $color-white);
+        &:hover {
+            color: $color-primary;
+        }
+    }
+}
