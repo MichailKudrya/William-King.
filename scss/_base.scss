@@ -1,7 +1,15 @@
+*, *::before, *::after {
+    box-sizing: border-box;
+}
 body {
     font-family: $font;
     background: $color-dark_1;
     color: $color-white;
+}
+html, body {
+    &._overflow {
+        overflow: hidden;
+    }
 }
 a {
     color: $color-white;

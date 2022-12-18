@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html id="html" lang="en">
 
 <head>
     <meta charset="UTF-8">
@@ -8,16 +8,23 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
     <title>William King</title>
 </head>
 
-<body>
+<body id="body">
     <div class="container">
         <div class="main-screen">
             <header class="header">
                 <a href="#" class="header__logo">William King<span>.</span></a>
-                <nav class="header-nav">
+                <div class="header__burger">
+                    <span id="icon-menu" onclick="navToggle()" class="material-icons _active">
+                        menu
+                    </span>
+                </div>
+                
+                <nav id="nav" class="header-nav">
                     <ul class="header-nav__ul">
                         <li class="header-nav__li">
                             <a href="#" class="header-nav__a _active">About</a>
@@ -38,13 +45,18 @@
                             <a href="#" class="header-nav__a">Contact</a>
                         </li>
                     </ul>
+                    <span id="icon-close" onclick="navToggle()" class="material-icons">
+                        close
+                    </span>
                 </nav>
             </header>
             <div class="main-screen__body">
                 <div class="main-screen__info">
                     <h1 class="main-screen__title">I’m William K.</h1>
-                    <h3 class="main-screen__subtitle">Web Designer <span>/</span> UI Designer <span>/</span> Graphic designer</h3>
-                    <p class="main-screen__desc">Rutrum cursus varius ullamcorper venenatis faucibus lobortis turpis dignissim. Commodo pellentesque tristique aliquet turpis. Morbi risus imperdiet</p>
+                    <h3 class="main-screen__subtitle">Web Designer <span>/</span> UI Designer <span>/</span> Graphic
+                        designer</h3>
+                    <p class="main-screen__desc">Rutrum cursus varius ullamcorper venenatis faucibus lobortis turpis
+                        dignissim. Commodo pellentesque tristique aliquet turpis. Morbi risus imperdiet</p>
                     <button class="main-screen__btn">Explore My Work</button>
                 </div>
                 <div class="main-screen__avatar">
@@ -56,6 +68,10 @@
             </div>
         </div>
     </div>
+
+
+
+    <script src="script.js"></script>
 </body>
 
 </html>
