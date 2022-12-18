@@ -21,6 +21,7 @@
 
     &__btn {
         display: inline-block;
+        cursor: pointer;
         margin-top: 35px;
         @include text ($font, 500, 16px, 19px, $color-white);
         padding: 13px 18px;
