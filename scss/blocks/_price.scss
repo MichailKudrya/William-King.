@@ -32,9 +32,6 @@
 
     }
 
-    &__info {
-    }
-
     &__title {
         @include text ($font, 500, 16px, 19px, $color-white);
         text-transform: uppercase;
